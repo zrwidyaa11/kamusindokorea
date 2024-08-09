@@ -4,7 +4,6 @@ import '../controllers/auth_controller.dart';
 import 'signup_view.dart';
 import 'home_view.dart'; // Pastikan impor home_view.dart
 
-
 class SignInView extends StatelessWidget {
   final AuthController controller = Get.put(AuthController());
   final RxBool _isPasswordVisible = false.obs;
@@ -91,11 +90,9 @@ class SignInView extends StatelessWidget {
                   )),
                   const SizedBox(height: 32),
                   ElevatedButton(
-                    onPressed: () async {
-                      await controller.signIn();
-                      if (controller.user.value != null) {
-                        Get.toNamed('/home');
-                      }
+                    onPressed: () {
+                      // Navigasi ke HomeView
+                      Get.to(() => HomeView());
                     },
                     child: const Text(
                       'Sign In',
@@ -125,7 +122,7 @@ class SignInView extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      Get.toNamed('/signup');
+                      Get.to(SignUpView());
                     },
                     child: const Text(
                       "Sign Up",

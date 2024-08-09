@@ -77,9 +77,13 @@ flutter:
   assets:
     - assets/fonts/PlusJakartaSans-Regular.ttf
     - assets/fonts/PlusJakartaSans-Bold.ttf
-    - assets/images/gambar reminder.png
+    - assets/images/reminder.png
     - assets/databases/tes.db
+    - assets/images/
+
     
+
+
 
   fonts:
     - family: PlusJakartaSans
